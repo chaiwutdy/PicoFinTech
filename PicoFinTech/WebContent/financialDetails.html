@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- 
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script src="./js/jquery-1.12.3.min.js"></script> 
+<script src="./js/bootstrap.min.js"></script> -->
+<style>
+ body {
+     padding-top: 70px;
+     /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+ }
+ .table-paddingLeft > tbody > tr > td,
+ .table-paddingLeft > thead > tr > td,
+ .table-paddingLeft {
+	    padding-left:0;
+ }
+</style>
+<title>Financial Details</title>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">PicoFinTech</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                		<li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="accountInfo.html">AccountInfo</a>
+                    </li>
+                    <li>
+                        <a href="dashBoard.html">DashBoard</a>
+                    </li>
+                    <li>
+                        <a href="financialDetails.html">FinanceDetails</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+<div class="container">
+	<table>
+		<tr>
+			<td class="col-md-1 table-paddingLeft"><label for="name">อัตราดอกเบี้ย(%)</label></td>
+			<td class="text-right col-md-1">36</td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+		</tr>
+		<tr>
+			<td class="col-md-1 table-paddingLeft"><label for="name">จำนวนเงินกู้(บาท)</label></td>
+			<td class="text-right col-md-1">50000</td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+		</tr>
+		<tr>
+			<td class="col-md-1 table-paddingLeft"><label for="name">วันที่ทำสัญญา</label></td>
+			<td class="text-right col-md-1">1/12/2559</td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+		</tr>
+		<tr><td colspan="4"></td></tr>
+		<tr>
+			<td class="col-md-1 table-paddingLeft"><label for="name">เงินผ่านต่องวด</label></td>
+			<td class="text-right col-md-1">5666.67</td>
+			<td class="text-center col-md-1"><label for="name">จำนวนงวด</label></td>
+			<td class="text-center col-md-1">12</td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+			<td class="text-center col-md-1"></td>
+		</tr>
+	</table>
+	<br>
+	
+	<table class="table table-hover table-bordered">
+		<thead>
+		<tr class="bg-primary">
+			<th class="text-center col-md-1">งวดที่</th>
+			<th class="text-center col-md-1">เงินต้น</th>
+			<th class="text-center col-md-1">ดอกเบี้ย</th>
+			<th class="text-center col-md-1">รวมชำระ</th>
+			<th class="text-center col-md-1">กำหนดชำระ</th>
+			<th class="text-center col-md-1">ชำระแล้ว</th>
+			<th class="text-center col-md-1">วันที่ชำระ</th>
+			<th class="text-center col-md-1">ค่าปรับ</th>
+		</tr>
+		</thead>
+		<tbody>
+		<script type="text/javascript">
+	    var cnt = 0;
+	    for (var i = 1; i <= 12; i++) 
+	    {
+	        cnt = cnt + 1;
+	        document.write("<tr>");
+	        document.write("<td class=\"text-center\" >"+cnt+"</td>");
+	        document.write("<td class=\"text-center\">4166.67</td>");
+	        document.write("<td class=\"text-center\">1500</td>");
+	       	document.write("<td class=\"text-center\">5666.67</td>");
+	        document.write("<td class=\"text-center\">1/"+cnt+"/2560</td>");
+	        document.write("<td></td>");
+	        document.write("<td></td>");
+	        document.write("<td></td>");
+	        document.write("</tr>");
+	    }
+		</script>
+		</tbody>
+			<tr>
+			<td class="text-center">รวม</td>
+			<td class="text-center">50000</td>
+			<td class="text-center">18000</td>
+			<td class="text-center">68000</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

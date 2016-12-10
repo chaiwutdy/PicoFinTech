@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- 
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script src="./js/jquery-1.12.3.min.js"></script> 
+<script src="./js/bootstrap.min.js"></script> -->
+<style>
+ body {
+     padding-top: 70px;
+     /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+ }
+ .table-paddingLeft > tbody > tr > td,
+ .table-paddingLeft > thead > tr > td,
+ .table-paddingLeft {
+	    padding-left:0;
+	}
+</style>
+<title>Dash Board</title>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">PicoFinTech</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                		<li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="accountInfo.html">AccountInfo</a>
+                    </li>
+                    <li>
+                        <a href="dashBoard.html">DashBoard</a>
+                    </li>
+                    <li>
+                        <a href="financialDetails.html">FinanceDetails</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<div class="container">
+	<table>
+		<tr>
+			<td class="col-sm-1 table-paddingLeft"><label for="name">สรุปเงินทุน</label></td>
+			<td class="text-right col-sm-1">10000000</td>
+			<td class="col-sm-1"></td>
+			<td class="col-sm-1"></td>
+		</tr>
+		<tr>
+			<td class="col-sm-1 table-paddingLeft"><label for="name">สรุปเงินที่ถูกปล่อยกู้</label></td>
+			<td class="text-right col-sm-1">4000000</td>
+			<td class="col-sm-1"></td>
+			<td class="col-sm-1"></td>
+		</tr>
+		<tr>
+			<td class="col-sm-1 table-paddingLeft"><label for="name">จำนวนลูกหนี้ที่ยังค้างชำระ</label></td>
+			<td class="text-right col-sm-1">219</td>
+			<td class="col-sm-1"></td>
+			<td class="col-sm-1"></td>
+		</tr>
+	</table>
+	<br>
+	
+	<table class="table table-hover table-bordered">
+		<thead>
+		<tr  class=" bg-primary">
+			<th class="col-sm-1">ระดับลูกหนี้</th>
+			<th class="col-sm-1">จำนวน (คน)</th>
+			<th class="col-sm-1">มูลค่ารวม (บาท)</th>
+			<th class="col-sm-1">เฉลี่ย/คน</th>
+		</tr>
+		</thead>
+		
+		<tbody>
+		<tr>
+			<td class="col-sm-1"><4999</td>
+			<td class="col-sm-1">45</td>
+			<td class="col-sm-1">180000</td>
+			<td class="col-sm-1">4000</td>
+		</tr>
+		<tr>
+			<td class="col-sm-1">5000 - 10000</td>
+			<td class="col-sm-1">20</td>
+			<td class="col-sm-1">200000</td>
+			<td class="col-sm-1">10000</td>
+		</tr>
+			<tr>
+			<td class="col-sm-1">10001 - 20000</td>
+			<td class="col-sm-1">70</td>
+			<td class="col-sm-1">1000000</td>
+			<td class="col-sm-1">14285.71</td>
+		</tr>
+			<tr>
+			<td class="col-sm-1">20001 - 30000</td>
+			<td class="col-sm-1">34</td>
+			<td class="col-sm-1">900000</td>
+			<td class="col-sm-1">26470.58</td>
+		</tr>
+		<tr>
+			<td class="col-sm-1">30001 - 40000</td>
+			<td class="col-sm-1">40</td>
+			<td class="col-sm-1">1270000</td>
+			<td class="col-sm-1">31750</td>
+		</tr>
+		<tr>
+			<td class="col-sm-1">>4000</td>
+			<td class="col-sm-1">10</td>
+			<td class="col-sm-1">450000</td>
+			<td class="col-sm-1">45000</td>
+		</tr>
+		</tbody>
+	</table>
+	
+	<table>
+		<tr>
+			<td class="col-sm-1 table-paddingLeft"><label for="name">รวมเงินกู้ค้าชำระ (ไม่รวมดอกเบี้ย)</label></td>
+			<td class="text-right col-sm-1">2000000</td>
+			<td class="col-sm-1"></td>
+			<td class="col-sm-1"></td>
+		</tr>
+		<tr>
+			<td class="col-sm-1 table-paddingLeft"><label for="name">รวมดอกเบี้ยชำระ</label></td>
+			<td class="text-right col-sm-1">480000</td>
+			<td class="col-sm-1"></td>
+			<td class="col-sm-1"></td>
+		</tr>
+	</table>
+	
+	<br>
+	<br>
+	<br>
+	<img alt="" class="img-responsive" src="testGraph.png">
+	
+</div>
+</body>
+</html>

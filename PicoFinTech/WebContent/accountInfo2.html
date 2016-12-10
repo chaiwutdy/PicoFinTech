@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- 
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script src="./js/jquery-1.12.3.min.js"></script> 
+<script src="./js/bootstrap.min.js"></script> -->
+<style>
+ body {
+     padding-top: 70px;
+     /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+ }
+ 
+	.table-borderless > tbody > tr > td,
+	.table-borderless > thead > tr > td,
+	.table-borderless {
+	    border-bottom:0;
+	    border-top: 0;
+	}
+/********************************************************************/
+.panel.with-nav-tabs .panel-heading{
+    padding: 5px 5px 0 5px;
+}
+.panel.with-nav-tabs .nav-tabs{
+	border-bottom: none;
+}
+.panel.with-nav-tabs .nav-justified{
+	margin-bottom: -1px;
+}
+/*** PANEL PRIMARY ***/
+.with-nav-tabs.panel-primary .nav-tabs > li > a,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+}
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+	color: #fff;
+	background-color: #3071a9;
+	border-color: transparent;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+	color: #428bca;
+	background-color: #fff;
+	border-color: #428bca;
+	border-bottom-color: transparent;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #428bca;
+    border-color: #3071a9;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #fff;   
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: #3071a9;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    background-color: #4a9fe9;
+}
+</style>
+
+<title>Financial Details</title>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">PicoFinTech</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                		<li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="accountInfo.html">AccountInfo</a>
+                    </li>
+                    <li>
+                        <a href="dashBoard.html">DashBoard</a>
+                    </li>
+                    <li>
+                        <a href="financialDetails.html">FinanceDetails</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<div class="container">
+<div class="panel with-nav-tabs panel-primary">
+	<div class="panel-heading">
+		<ul class="nav nav-tabs" id="myTab">
+		  <li class="active"><a href="#tab1">ข้อมูลส่วนตัว</a></li>
+		  <li><a href="#tab2">เอกสาร</a></li>
+		  <li><a href="#tab3">ประวัติการกู้เงิน</a></li>
+		  <li><a href="#tab4">ประวัติเครดิตบูโร</a></li>
+		</ul>
+	</div>
+	<div class="panel-body">
+		<div class="tab-content">
+		  <div class="tab-pane fade in active" id="tab1">
+			  <form>
+				<table class="table table-borderless">
+					<tr>
+						<td><label for="name">ชื่อ-นามสกุล : </label></td>
+						<td colspan="3"><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td><label for="name">เลขบัตร : </label></td>
+						<td colspan="3"><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td><label for="name">วันเดือนปีเกิด : </label></td>
+						<td colspan="3"><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td><label for="name">อาชีพ : </label></td>
+						<td><input type="text" class="form-control"></td>
+						<td><label for="name">ตำแหน่ง : </label></td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td><label for="name">รายได้ : </label></td>
+						<td colspan="3"><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td><label for="name">ที่อยู่ที่อาศัย : </label></td>
+						<td colspan="3"><textarea rows="3" cols="3" class="form-control"></textarea></td>
+					</tr>
+					<tr>
+						<td><label for="name">เบอร์โทรศัพท์ : </label></td>
+						<td><input type="text" class="form-control"></td>
+						<td><label for="name">เบอร์มือถือ : </label></td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td><label for="name">ที่อยู่ที่ทำงาน : </label></td>
+						<td colspan="3"><textarea rows="3" cols="3" class="form-control"></textarea></td>
+					</tr>
+					<tr>
+						<td><label for="name">เบอร์โทรศัพท์ : </label></td>
+						<td><input type="text" class="form-control"></td>
+						<td><label for="name">เบอร์มือถือ : </label></td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td><label for="name">วันที่บันทึก : </label></td>
+						<td colspan="3"><label for="name">30/11/2016</label></td>
+					</tr>
+				</table>
+				</form>
+		  </div>
+		  <div class="tab-pane fade" id="tab2">เอกสาร</div>
+		  <div class="tab-pane fade" id="tab3">ประวัติการกู้เงิน</div>
+		  <div class="tab-pane fade" id="tab4">ประวัติเครดิตบูโร</div>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+	/* $('#myTab a').click(function(e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	  var id = $(this).attr('href').substr(1);
+	  $( "#"+id ).load( id+".html" );
+	}); */
+
+	// store the currently selected tab in the hash value
+	/*
+	$("ul.nav-tabs > li > a").on("shown.bs.tab", function(e) {
+	  var id = $(e.target).attr("href").substr(1);
+	  window.location.hash = id;
+	});
+	*/
+	// on load of the page: switch to the currently selected tab
+	/*
+	var hash = window.location.hash;
+	$('#myTab a[href="' + hash + '"]').tab('show');
+	*/
+	/* $( document ).ready(function() {
+		$( "#tab1").load( "tab1.html" );
+	}); */
+</script>
+</body>
+</html>
